@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General - Hackathon MTY 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Space+Mono&family=Inter:wght@400;700&display=swap');
+        
+        body { background-color: #5C4A42; font-family: 'Inter', sans-serif; }
+        .font-grotesk { font-family: 'Space Grotesk', sans-serif; }
+        .font-mono { font-family: 'Space Mono', monospace; }
+        
+        /* Estilo Hack Club: Bordes toscos, caja sólida y sombras duras de bloque */
+        .hc-card {
+            background-color: #F5EFEB;
+            border: 4px solid #362A24;
+            box-shadow: 8px 8px 0px #362A24;
+            transition: all 0.15s ease-in-out;
+        }
+        .hc-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 12px 12px 0px #362A24;
+        }
+
+        /* Fondo de papel cuadriculado/punteado fino aesthetic */
+        .bg-paper { 
+            background-color: #F5EFEB; 
+            background-image: radial-gradient(#E6DFD5 2px, transparent 0);
+            background-size: 16px 16px;
+        }
+
+        /* Animación de las estrellitas */
+        @keyframes pulseStar {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.25); }
+        }
+        .star { animation: pulseStar 3s ease-in-out infinite; }
+
+        /* Efecto de marcador/resaltador en el texto */
+        .highlight {
+            background: linear-gradient(120deg, #ffdf7e 0%, #f7b154 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 0.3em;
+            background-position: 0 85%;
+        }
+    </style>
+</head>
+<body class="text-dark-coffee min-h-screen flex flex-col items-center p-6 relative overflow-x-hidden">
+
+    <span class="absolute top-10 left-10 text-amber-200 text-2xl star">✦</span>
+    <span class="absolute top-40 right-10 text-white text-xl star" style="animation-delay: 1s;">✦</span>
+    <span class="absolute bottom-20 left-10 text-amber-100 text-3xl star" style="animation-delay: 0.5s;">✦</span>
+
+    <nav class="w-full max-w-5xl flex justify-between items-center mb-16 z-50 mt-4">
+             <a href="index.html" class="hc-card bg-white px-5 py-2 font-mono text-xs font-bold uppercase tracking-wider hover:bg-amber-50">
+                 ← Volver al inicio
+             </a>
+        <div class="bg-amber-400 border-4 border-[#362A24] px-4 py-1.5 rotate-[-2deg] shadow-[4px_4px_0px_#362A24] hidden sm:block">
+            <span class="font-mono font-bold text-black text-xs tracking-tight">TEENS MAKING COOL STUFF </span>
+        </div>
+    </nav>
+
+    <main class="w-full max-w-4xl z-10 flex-1">
+        
+        <header class="text-center mb-24 relative">
+            <h1 class="font-grotesk text-6xl md:text-8xl text-white uppercase tracking-tighter relative z-10 drop-shadow-sm">
+                General <span class="text-amber-200">Info</span>
+            </h1>
+            <p class="font-mono text-amber-100/80 mt-3 text-sm md:text-base tracking-wide">// DESCUBRE EL PROYECTO DETRÁS DEL CAOS</p>
+        </header>
+
+        <div class="space-y-20 pb-20">
+            
+            <section class="hc-card bg-paper p-8 md:p-12 rounded-none rotate-[-1deg] relative">
+                <span class="absolute -top-5 -left-4 bg-red-500 text-white font-mono font-bold px-4 py-1 border-4 border-[#362A24] rotate-[-8deg] shadow-[3px_3px_0px_#362A24]">
+                    01
+                </span>
+                <h2 class="font-grotesk text-4xl md:text-5xl mb-6 uppercase tracking-tight text-amber-950">
+                    ¿Quiénes <span class="highlight">somos?</span>
+                </h2>
+                <div class="text-base md:text-lg text-stone-800 leading-relaxed font-sans">
+                    <p> Adolecentes con ganas de devorar el mundo </p>
+                    </p> Creadora: Ana Antunez :B </p>
+                </div>
+            </section>
+
+            <section class="hc-card bg-paper p-8 md:p-12 rounded-none rotate-[1deg] relative">
+                <span class="absolute -top-5 -right-4 bg-blue-500 text-white font-mono font-bold px-4 py-1 border-4 border-[#362A24] rotate-[8deg] shadow-[3px_3px_0px_#362A24]">
+                    02
+                </span>
+                <h2 class="font-grotesk text-4xl md:text-5xl mb-6 uppercase tracking-tight text-amber-950">
+                    ¿A dónde queremos <span class="highlight">llegar?</span>
+                </h2>
+                <div class="text-base md:text-lg text-stone-800 leading-relaxed font-sans">
+                    <p>La meta es llegar a muchas partes de Mexico Y Latinoamerica para mas chicos con ganas de Crear, Demostrar que el unico limite es nuestra propia mente</p>
+                </div>
+                <div class="absolute -bottom-12 -right-6 w-28 h-28 pointer-events-none hidden md:block">
+                    <img src="descargar.png" alt="Capybara" class="w-full h-full object-contain filter drop-shadow-md">
+                </div>
+            </section>
+
+            <section class="hc-card bg-paper p-8 md:p-12 rounded-none rotate-[-0.5deg] relative">
+                <span class="absolute -top-5 -left-4 bg-amber-500 text-white font-mono font-bold px-4 py-1 border-4 border-[#362A24] rotate-[-6deg] shadow-[3px_3px_0px_#362A24]">
+                    03
+                </span>
+                <h2 class="font-grotesk text-4xl md:text-5xl mb-6 uppercase tracking-tight text-amber-950">
+                    ¡Cómo <span class="highlight">apoyarnos!</span>
+                </h2>
+                <div class="text-base md:text-lg text-stone-800 leading-relaxed font-sans">
+                    <p>Asiste a Nuestros Eventos! </p>
+                    <p>Comparte nuestro proyecto con tus amigos, mientras mas gente mejor!! </p>
+                </div>
+            </section>
+            
+        </div>
+    </main>
+
+    <footer class="w-full border-t border-white/10 py-8 text-center font-mono text-xs text-stone-400 bg-black/10 relative z-50">
+        <div class="mb-4 text-amber-200/90 font-medium tracking-wide">
+            "Hecho con amor por adolescentes para adolescentes"
+        </div>
+        
+        <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 mt-2 text-stone-400">
+            <p class="flex items-center gap-1.5 hover:text-white transition-colors">
+                <span>📞</span> +52 81 2443 0879
+            </p>
+            <p class="flex items-center gap-1.5 hover:text-white transition-colors">
+                <span>✉️</span> annaastrs@gmail.com
+            </p>
+            <p class="flex items-center gap-1.5 hover:text-white transition-colors">
+                <span>📸</span> @annaastrss
+            </p>
+        </div>
+        <div class="mt-6 text-[10px] opacity-30">
+            🏎️ Hackathon MTY 2026 • Monterrey, NL.
+        </div>
+    </footer>
+
+</body>
+</html>
