@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Más Sobre el Evento - Hackathon MTY 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Space+Mono&family=Inter:wght@400;700&display=swap');
+        
+        body { background-color: #5C4A42; font-family: 'Inter', sans-serif; }
+        .font-grotesk { font-family: 'Space Grotesk', sans-serif; }
+        .font-mono { font-family: 'Space Mono', monospace; }
+        
+        .text-dark-coffee { color: #362A24; }
+
+        /* Estilo Hack Club Cards */
+        .hc-card {
+            background-color: #F5EFEB;
+            border: 4px solid #362A24;
+            box-shadow: 8px 8px 0px #362A24;
+            transition: all 0.15s ease-in-out;
+        }
+        .hc-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 12px 12px 0px #362A24;
+        }
+
+        .bg-paper { 
+            background-color: #F5EFEB; 
+            background-image: radial-gradient(#E6DFD5 2px, transparent 0);
+            background-size: 16px 16px;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #ffdf7e 0%, #f7b154 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 0.3em;
+            background-position: 0 85%;
+        }
+
+        @keyframes pulseStar {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+        .star-cute { 
+            animation: pulseStar 3s ease-in-out infinite; 
+            display: inline-block;
+        }
+
+        /* Modal con transiciones suaves */
+        .modal-blur {
+            backdrop-filter: blur(4px);
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="text-dark-coffee min-h-screen flex flex-col items-center p-6 relative overflow-x-hidden">
+
+    <span class="absolute top-10 left-10 text-amber-200 text-2xl star-cute">✦</span>
+    <span class="absolute top-40 right-10 text-white text-xl star-cute" style="animation-delay: 1s;">✦</span>
+    <span class="absolute bottom-20 left-10 text-amber-100 text-3xl star-cute" style="animation-delay: 0.5s;">✦</span>
+
+    <nav class="w-full max-w-5xl flex justify-between items-center mb-16 z-40 mt-4">
+         <a href="index.html" class="hc-card bg-white px-5 py-2 font-mono text-xs font-bold uppercase tracking-wider hover:bg-amber-50 text-dark-coffee">
+            ← Volver al inicio
+         </a>
+        <div class="flex items-center gap-4">
+            <div class="bg-amber-400 border-4 border-[#362A24] px-4 py-1.5 rotate-[-2deg] shadow-[4px_4px_0px_#362A24] hidden sm:block">
+                <span class="font-mono font-bold text-black text-xs tracking-tight">Si puedes imaginarlo puedes Crearlo</span>
+            </div>
+            <button onclick="openRegisterModal()" class="bg-[#F5EFEB] text-dark-coffee px-6 py-2 rounded-full font-bold hover:bg-white transition-all text-xs font-mono shadow-md border-2 border-transparent hover:border-[#362A24]">
+                Registrarme
+            </button>
+        </div>
+    </nav>
+
+    <main class="w-full max-w-4xl z-10 flex-1">
+        
+        <header class="text-center mb-24">
+            <h1 class="font-grotesk text-5xl md:text-7xl text-white uppercase tracking-tighter drop-shadow-sm">
+                Más sobre <span class="text-amber-200">el evento</span>
+            </h1>
+            <p class="font-mono text-amber-100/80 mt-3 text-sm md:text-base tracking-wide">// SPRINT INTENSO DE HARDWARE Y ROBÓTICA</p>
+        </header>
+
+        <section class="mb-24">
+            <h2 class="font-grotesk text-4xl text-white uppercase tracking-tight mb-12 text-center md:text-left">
+                 Horarios del <span class="text-amber-200 highlight">Hackathon</span>
+            </h2>
+
+            <div class="space-y-16">
+                <div class="hc-card bg-paper p-6 md:p-10 rotate-[0.5deg] relative">
+                    <span class="absolute -top-5 -left-4 bg-blue-500 text-white font-mono font-bold px-4 py-1 border-4 border-[#362A24] rotate-[-2deg] shadow-[3px_3px_0px_#362A24]">
+                        SÁBADO: El Gran Sprint 
+                    </span>
+                    <div class="mt-6 font-mono text-sm md:text-base text-dark-coffee divide-y divide-[#362A24]/10">
+                        <div class="py-3 flex flex-col sm:flex-row sm:justify-between"><span class="font-bold text-amber-900">08:30 - 09:15 am</span> <span>Check-In & Welcome Swag Pack </span></div>
+                        <div class="py-3 flex flex-col sm:flex-row sm:justify-between"><span class="font-bold text-amber-900">09:15 - 09:45 am</span> <span>Ceremonia de Apertura y Reglas </span></div>
+                        <div class="py-3 flex flex-col sm:flex-row sm:justify-between"><span class="font-bold text-amber-900">09:45 - 11:00 am</span> <span>Team Building & Lluvia de Ideas </span></div>
+                        <div class="py-3 flex flex-col sm:flex-row sm:justify-between bg-amber-400/20 px-2 rounded"><span class="font-bold text-amber-800">11:00 - 11:45 pm</span> <span>Comida </span></div>
+                        <div class="py-3 flex flex-col sm:flex-row sm:justify-between"><span class="font-bold text-amber-900">12:00 - 01:00 pm</span> <span>Workshop 01: Motores y MicroPython (Opcional) </span></div>
+                        <div class="py-3 flex flex-col sm:flex-row sm:justify-between bg-red-500/10 px-2 rounded"><span class="font-bold text-red-700">01:00 - 07:35 pm</span> <span>Lock IN </span></div>
+                        <div class="py-3 flex flex-col sm:flex-row sm:justify-between"><span class="font-bold text-amber-900">07:35 - 8:00 pm</span> <span>Demo Dmeostration </span></div>
+                        <div class="py-3 flex flex-col sm:flex-row sm:justify-between bg-indigo-500/10 text-indigo-900 px-2 rounded"><span class="font-bold text-indigo-700">8:00 - 08:30 pm</span> <span>Cena</span></div>
+                        <div class="py-3 flex flex-col sm:flex-row sm:justify-between opacity-60"><span class="font-bold">08:30 - 09:30 pm</span> <span>Actividad Sorpresa </span></div>
+                    </div>
+                </div>
+
+                <div class="hc-card bg-paper p-6 md:p-10 rotate-[-0.5deg] relative">
+                    <span class="absolute -top-5 -right-4 bg-amber-500 text-white font-mono font-bold px-4 py-1 border-4 border-[#362A24] rotate-[2deg] shadow-[3px_3px_0px_#362A24]">
+                        DOMINGO: Cierre 
+                    </span>
+                    <div class="mt-6 font-mono text-sm md:text-base text-dark-coffee divide-y divide-[#362A24]/10">
+                        <div class="py-3 flex flex-col sm:flex-row sm:justify-between"><span class="font-bold text-amber-900">08:30 - 09:15 am</span> <span>Desayuno </span></div>
+                        <div class="py-3 flex flex-col sm:flex-row sm:justify-between"><span class="font-bold text-amber-900">09:15 - 10:15 am</span> <span>Work shop2 Opcional</span></div>
+                        <div class="py-3 flex flex-col sm:flex-row sm:justify-between bg-amber-400/20 px-2 rounded"><span class="font-bold text-amber-800">10:15 - 11:30 am</span> <span>MEGA LOCK IN</span></div>
+                        <div class="py-3 flex flex-col sm:flex-row sm:justify-between font-bold text-red-600 bg-red-100 px-2 rounded"><span class="font-mono">11:30 am</span> <span>Ronda de Pitches</span></div>
+                        <div class="py-3 flex flex-col sm:flex-row sm:justify-between bg-blue-500/10 px-2 rounded"><span class="font-bold text-blue-900">11:45 - 01:45 pm</span> <span>Expo y Votacion  </span></div>
+                      
+                        <div class="py-3 flex flex-col sm:flex-row sm:justify-between font-bold text-green-700 bg-green-400/20 px-2 rounded"><span class="font-mono">02:30 - 03:15 pm</span> <span> Premiación y Clausura</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="font-grotesk text-4xl text-white uppercase tracking-tight mb-4 text-center md:text-left">
+                 Workshops para <span class="text-amber-200 highlight">Principiantes</span>
+            </h2>
+            <p class="font-mono text-amber-100/70 text-xs md:text-sm mb-10 text-center md:text-left">// ¿No sabes nada de código o circuitos? ¡Ningún problema, aquí te enseñamos!</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="hc-card bg-paper p-6 md:p-8 flex flex-col justify-between gap-4">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-mono text-xs font-bold uppercase text-amber-700 bg-amber-400/20 px-2 py-0.5 rounded border border-amber-400/40">Workshop 01</span>
+                            <span class="text-amber-600 text-xs star-cute">✦ ✦ ✦</span>
+                        </div>
+                        <h3 class="font-grotesk text-2xl text-amber-950 mb-3">Introducción a MicroPython y Electrónica Básica</h3>
+                        <p class="text-stone-700 text-sm leading-relaxed font-mono">
+                            Aprende los fundamentos para controlar componentes físicos, leer sensores y estructurar la lógica de tu hardware desde cero. Ideal para dar tus primeros pasos con microcontroladores sin miedo alguno.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="hc-card bg-paper p-6 md:p-8 flex flex-col justify-between gap-4">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="font-mono text-xs font-bold uppercase text-blue-700 bg-blue-400/20 px-2 py-0.5 rounded border border-blue-400/40">Workshop 02</span>
+                            <span class="text-blue-600 text-xs star-cute">✦ ✦ ✦</span>
+                        </div>
+                        <h3 class="font-grotesk text-2xl text-amber-950 mb-3">Diseño en 3D y Chasis Creativos</h3>
+                        <p class="text-stone-700 text-sm leading-relaxed font-mono">
+                            Usa herramientas sencillas de modelado en 3D para diseñar la estructura externa y el chasis personalizado de tu vehículo. Te enseñamos a organizar tus piezas para que todo ensamble perfecto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="registerModal" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center hidden modal-blur p-4">
+        <div class="hc-card bg-paper w-full max-w-2xl rounded-[30px] p-6 md:p-8 relative">
+            
+            <button onclick="closeRegisterModal()" class="absolute top-4 right-4 font-mono font-bold text-stone-500 hover:text-black text-xl border-2 border-transparent hover:border-[#362A24] rounded-full w-8 h-8 flex items-center justify-center transition-all bg-white/50">
+                ✕
+            </button>
+
+            <div class="text-center mb-6">
+                <span class="text-amber-600 font-mono text-sm star-cute">✦ ✦ ¡Estás a un paso! ✦ ✦</span>
+                <h2 class="font-grotesk text-3xl uppercase tracking-tight text-dark-coffee mt-1">Registro Hackathon MTY</h2>
+            </div>
+
+            <div class="w-full bg-white border-2 border-[#362A24] rounded-2xl h-96 overflow-hidden relative shadow-inner">
+                <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-amber-50/50">
+                    <span class="text-4xl mb-3">🛠️</span>
+                    <p class="font-mono font-bold text-sm text-amber-900 mb-1">¡Anna está conectando los cables del backend!</p>
+                    <p class="font-mono text-xs text-stone-500 max-w-sm">
+                        Pronto podrás rellenar tus datos aquí directamente. Cuando crees tu formulario, cambiaremos este recuadro por tu hoja de registro activa. ¡Prepara tus circuitos!
+                    </p>
+                </div>
+
+                </div>
+        </div>
+    </div>
+
+    <footer class="w-full border-t border-white/10 py-8 text-center font-mono text-xs text-stone-400 bg-black/10 relative z-30 mt-12">
+        <div class="mb-4 text-amber-200/90 font-medium tracking-wide">
+            "Hecho con amor por adolescentes para adolescentes"
+        </div>
+        <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 mt-2 text-stone-400">
+            <p class="flex items-center gap-1.5 hover:text-white transition-colors"><span>📞</span> +52 81 2443 0879</p>
+            <p class="flex items-center gap-1.5 hover:text-white transition-colors"><span>✉️</span> annaastrs@gmail.com</p>
+            <p class="flex items-center gap-1.5 hover:text-white transition-colors"><span>📸</span> @annaastrss</p>
+        </div>
+        <div class="mt-6 text-[10px] opacity-30"> Hackathon MTY 2026 • Monterrey, NL.</div>
+    </footer>
+
+    <script>
+        function openRegisterModal() {
+            document.getElementById('registerModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Detiene el scroll de fondo
+        }
+
+        function closeRegisterModal() {
+            document.getElementById('registerModal').classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Devuelve el scroll
+        }
+
+        // Cierra el modal si dan click afuera del recuadro crema
+        window.onclick = function(event) {
+            let modal = document.getElementById('registerModal');
+            if (event.target == modal) {
+                closeRegisterModal();
+            }
+        }
+    </script>
+
+</body>
+</html>
